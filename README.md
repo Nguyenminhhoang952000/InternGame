@@ -1,2 +1,2 @@
 # InternGame
-NMH
+Nguyễn Minh Hoàng
