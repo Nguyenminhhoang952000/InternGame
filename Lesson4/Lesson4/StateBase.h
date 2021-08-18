@@ -4,7 +4,6 @@ class StateContext;
 
 class StateBase {
 public:
-	StateBase();
 	virtual void close(StateContext* text) = 0;
 	virtual void lock(StateContext* text) = 0;
 	virtual void unlock(StateContext* text) = 0;
