@@ -5,11 +5,11 @@
 using namespace std;
 
 void LockedState::close(StateContext* text) {
-	cout << "Currently locked, can't close" << endl;
+	cout << "Currently locked, can not close" << endl;
 
 }
 void LockedState::lock(StateContext* text) {
-	cout << "Currently locked, cannot lock" << endl;
+	cout << "Currently locked, can not lock" << endl;
 
 }
 void LockedState::unlock(StateContext* text) {
@@ -18,6 +18,6 @@ void LockedState::unlock(StateContext* text) {
 
 }
 void LockedState::open(StateContext* text) {
-	cout << "Currently locked, can't open" << endl;
+	cout << "Currently locked, can not open" << endl;
 
 }

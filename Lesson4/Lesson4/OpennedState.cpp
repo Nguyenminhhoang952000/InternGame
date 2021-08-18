@@ -8,10 +8,10 @@ void OpennedState::close(StateContext* text) {
 	text->setState(new ClosedState);
 }
 void OpennedState::lock(StateContext* text) {
-	cout << "Currently open, cannot be locked." << endl;
+	cout << "Currently open, can not be locked." << endl;
 }
 void OpennedState::unlock(StateContext* text) {
-	cout << "Currently open, can't unlock" << endl;
+	cout << "Currently open, can not unlock" << endl;
 }
 void OpennedState::open(StateContext* text) {
 	cout << "Currently the door is open " << endl;
