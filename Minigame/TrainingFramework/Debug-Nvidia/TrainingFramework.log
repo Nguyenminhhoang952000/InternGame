@@ -1,0 +1,4 @@
+﻿  GSIntro.cpp
+C:\Users\BVCN 88\OneDrive\Documents\InternGame\InternGame\Minigame\TrainingFramework\src\GameStates\GSIntro.cpp(20,83): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+C:\Users\BVCN 88\OneDrive\Documents\InternGame\InternGame\Minigame\TrainingFramework\src\GameStates\GSIntro.cpp(20,51): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+  TrainingFramework.vcxproj -> C:\Users\BVCN 88\OneDrive\Documents\InternGame\InternGame\Minigame\BIN-Nvidia\TrainingFramework.exe
