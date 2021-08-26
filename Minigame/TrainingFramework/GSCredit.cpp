@@ -40,12 +40,12 @@ void GSCredit::Init()
 	//text
 	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
 	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("Brightly Crush Shine.otf");
-	m_text = std::make_shared<Text>(shader, font, "Game: songoku", TextColor::GREEN, 1.0);
-	m_text1 = std::make_shared<Text>(shader, font, "Creator: Hoangnote", TextColor::GREEN, 1.0);
-	m_text2 = std::make_shared<Text>(shader, font, "Pupil: UET", TextColor::GREEN, 1.0);
-	m_text->Set2DPosition(Vector2(100, 200));
-	m_text1->Set2DPosition(Vector2(100, 250));
-	m_text2->Set2DPosition(Vector2(100, 300));
+	m_text = std::make_shared<Text>(shader, font, "Game: songoku", TextColor::GREEN, 2.0);
+	m_text1 = std::make_shared<Text>(shader, font, "Creator: Hoangnote", TextColor::GREEN, 2.0);
+	m_text2 = std::make_shared<Text>(shader, font, "Pupil: UET", TextColor::GREEN, 2.0);
+	m_text->Set2DPosition(Vector2(500, 200));
+	m_text1->Set2DPosition(Vector2(500, 250));
+	m_text2->Set2DPosition(Vector2(500, 300));
 }
 
 void GSCredit::Exit()

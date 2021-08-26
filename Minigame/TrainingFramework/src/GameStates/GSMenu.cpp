@@ -36,8 +36,8 @@ void GSMenu::Init()
 	// option button
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_menu.tga");
 	std::shared_ptr<GameButton> button_menu = std::make_shared<GameButton>(model, shader, texture);
-	button_menu->Set2DPosition(240, 600);
-	button_menu->SetSize(55, 55);
+	button_menu->Set2DPosition(700, 500);
+	button_menu->SetSize(75, 75);
 	button_menu->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_OPTION);
 		});
@@ -45,8 +45,8 @@ void GSMenu::Init()
 	// credit button
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_help.tga");
 	std::shared_ptr<GameButton> button_credit = std::make_shared<GameButton>(model, shader, texture);
-	button_credit->Set2DPosition(240, 700);
-	button_credit->SetSize(55, 55);
+	button_credit->Set2DPosition(1350,600);
+	button_credit->SetSize(70, 70);
 	button_credit->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_CREDIT);
 		});
@@ -56,7 +56,7 @@ void GSMenu::Init()
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_close.tga");
 	button = std::make_shared<GameButton>(model, shader, texture);
 	button->Set2DPosition(Globals::screenWidth - 50, 50);
-	button->SetSize(50, 50);
+	button->SetSize(70, 70);
 	button->SetOnClick([]() {
 		exit(0);
 		});
@@ -66,14 +66,14 @@ void GSMenu::Init()
 	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
 	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("Brightly Crush Shine.otf");
 	m_textGameName = std::make_shared< Text>(shader, font, "NMH-Songoku", Vector4(0.0f, 0.5f, 0.0f, 5.0f), 3.0f);
-	m_textGamePlay = std::make_shared< Text>(shader, font, "Play", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 1.0f);
+	m_textGamePlay = std::make_shared< Text>(shader, font, "Play", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 2.0f);
 	m_textGameOption = std::make_shared< Text>(shader, font, "Option", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 1.0f);
 	m_textGameCredit = std::make_shared< Text>(shader, font, "Credit", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 1.0f);
 
-	m_textGameName->Set2DPosition(Vector2(15, 230));
-	m_textGamePlay->Set2DPosition(Vector2(75, 400));
-	m_textGameOption->Set2DPosition(Vector2(130, 610));
-	m_textGameCredit->Set2DPosition(Vector2(130, 710));
+	m_textGameName->Set2DPosition(Vector2(480, 120));
+	m_textGamePlay->Set2DPosition(Vector2(490, 320));
+	m_textGameOption->Set2DPosition(Vector2(580, 510));
+	m_textGameCredit->Set2DPosition(Vector2(1240, 610));
 }
 
 void GSMenu::Exit()
