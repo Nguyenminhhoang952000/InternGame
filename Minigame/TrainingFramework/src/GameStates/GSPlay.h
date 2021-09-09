@@ -6,8 +6,13 @@ class Sprite3D;
 class Text;
 class GameButton;
 
-class GSPlay :
-	public GameStateBase
+#define KEY_RIGHT 39
+#define KEY_LEFT  37
+#define KEY_UP    38
+#define KEY_DOWN  40
+
+
+class GSPlay : public GameStateBase
 {
 public:
 	GSPlay();
@@ -29,6 +34,9 @@ public:
 private:
 	std::shared_ptr<Sprite2D>	m_background;
 	std::shared_ptr<Text>		m_score;
+	std::shared_ptr<Sprite2D>   m_player;
+	std::vector<std::shared_ptr<Sprite2D>> m_bullet;
+	std::vector<std::shared_ptr<Sprite2D>> m_MonsterList;
 	std::list<std::shared_ptr<GameButton>>	m_listButton;
 
 };

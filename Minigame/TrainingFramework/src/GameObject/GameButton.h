@@ -10,6 +10,7 @@ public:
 	void	SetOnClick(void	(*pBtClick)());
 	bool	HandleTouchEvents(GLint x, GLint y, bool bIsPressed);
 	bool	IsHolding();
+	void    SetGameButton(bool b);
 
 private:
 	void	(*m_pBtClick)();

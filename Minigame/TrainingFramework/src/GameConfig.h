@@ -25,6 +25,11 @@ public:
 	static int Globals::screenHeight;
 };
 
+//Dinh nghia kich thuoc cua tile map
+#define MAX_MAP_X 400
+#define MAX_MAP_Y 10 
+
+
 // define value
 #define PI 3.14f
 #define MAX_DEGREE 360
@@ -82,6 +87,7 @@ public:
 #define LOGW(...)
 #define LOGF(...)
 #endif
+
 
 // KEY define 
 #ifdef WIN32

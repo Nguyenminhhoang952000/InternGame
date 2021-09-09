@@ -45,3 +45,13 @@ bool GameButton::IsHolding()
 {
 	return m_isHolding;
 }
+
+void GameButton::SetGameButton(bool b)
+{
+	m_isHolding = b;
+	if (m_isHolding == true)
+	{
+		m_pBtClick();
+		m_isHolding = false;
+	}
+}

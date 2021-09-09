@@ -16,7 +16,7 @@ GSMenu::~GSMenu()
 void GSMenu::Init()
 {
 	auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
-	auto texture = ResourceManagers::GetInstance()->GetTexture("bg_main_menu.tga");
+	auto texture = ResourceManagers::GetInstance()->GetTexture("background.tga");
 
 	// background
 	auto shader = ResourceManagers::GetInstance()->GetShader("TextureShader");
@@ -27,8 +27,8 @@ void GSMenu::Init()
 	// play button
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_play.tga");
 	std::shared_ptr<GameButton> button = std::make_shared<GameButton>(model, shader, texture);
-	button->Set2DPosition(Globals::screenWidth / 2, Globals::screenHeight / 2);
-	button->SetSize(200, 200);
+	button->Set2DPosition(150, Globals::screenHeight - 250);
+	button->SetSize(80, 80);
 	button->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PLAY);
 		});
@@ -36,8 +36,8 @@ void GSMenu::Init()
 	// option button
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_menu.tga");
 	std::shared_ptr<GameButton> button_menu = std::make_shared<GameButton>(model, shader, texture);
-	button_menu->Set2DPosition(700, 500);
-	button_menu->SetSize(75, 75);
+	button_menu->Set2DPosition(50, Globals::screenHeight - 50);
+	button_menu->SetSize(80, 80);
 	button_menu->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_OPTION);
 		});
@@ -45,8 +45,8 @@ void GSMenu::Init()
 	// credit button
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_help.tga");
 	std::shared_ptr<GameButton> button_credit = std::make_shared<GameButton>(model, shader, texture);
-	button_credit->Set2DPosition(1350,600);
-	button_credit->SetSize(70, 70);
+	button_credit->Set2DPosition(160, Globals::screenHeight - 50);
+	button_credit->SetSize(80, 80);
 	button_credit->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_CREDIT);
 		});
@@ -55,8 +55,8 @@ void GSMenu::Init()
 	// exit button
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_close.tga");
 	button = std::make_shared<GameButton>(model, shader, texture);
-	button->Set2DPosition(Globals::screenWidth - 50, 50);
-	button->SetSize(70, 70);
+	button->Set2DPosition(260, Globals::screenHeight - 50);
+	button->SetSize(80, 80);
 	button->SetOnClick([]() {
 		exit(0);
 		});
@@ -65,15 +65,17 @@ void GSMenu::Init()
 	// game title
 	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
 	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("Brightly Crush Shine.otf");
-	m_textGameName = std::make_shared< Text>(shader, font, "NMH-Songoku", Vector4(0.0f, 0.5f, 0.0f, 5.0f), 3.0f);
-	m_textGamePlay = std::make_shared< Text>(shader, font, "Play", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 2.0f);
-	m_textGameOption = std::make_shared< Text>(shader, font, "Option", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 1.0f);
-	m_textGameCredit = std::make_shared< Text>(shader, font, "Credit", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 1.0f);
+	//m_textGameName = std::make_shared< Text>(shader, font, "NMH-Songoku", Vector4(0.0f, 0.5f, 0.0f, 5.0f), 3.0f);
+	m_textGamePlay = std::make_shared< Text>(shader, font, "Play", Vector4(0.3f, 0.5f, 0.0f, 1.0f), 2.0f);
+	m_textGameOption = std::make_shared< Text>(shader, font, "Option", Vector4(0.3f, 0.5f, 0.0f, 1.0f), 1.0f);
+	m_textGameCredit = std::make_shared< Text>(shader, font, "Credit", Vector4(0.3f, 0.5f, 0.0f, 1.0f), 1.0f);
+	m_textGameClose = std::make_shared< Text>(shader, font, "Close", Vector4(0.3f, 0.5f, 0.0f, 1.0f), 1.0f);
 
-	m_textGameName->Set2DPosition(Vector2(480, 120));
-	m_textGamePlay->Set2DPosition(Vector2(490, 320));
-	m_textGameOption->Set2DPosition(Vector2(580, 510));
-	m_textGameCredit->Set2DPosition(Vector2(1240, 610));
+	//m_textGameName->Set2DPosition(Vector2(480, 120));
+	m_textGamePlay->Set2DPosition(Vector2(200, Globals::screenHeight - 220));
+	m_textGameOption->Set2DPosition(Vector2(20, Globals::screenHeight - 100));
+	m_textGameCredit->Set2DPosition(Vector2(130, Globals::screenHeight - 100));
+	m_textGameClose->Set2DPosition(Vector2(230, Globals::screenHeight - 100));
 }
 
 void GSMenu::Exit()
@@ -129,8 +131,9 @@ void GSMenu::Draw()
 	{
 		it->Draw();
 	}
-	m_textGameName->Draw();
+	//m_textGameName->Draw(); ve
 	m_textGamePlay->Draw();
 	m_textGameOption->Draw();
 	m_textGameCredit->Draw();
+	m_textGameClose->Draw();
 }

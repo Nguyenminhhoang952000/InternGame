@@ -44,7 +44,8 @@ void CleanUp()
 	Application::FreeInstance();
 }
 
-GLint _tmain(GLint argc, _TCHAR* argv[])
+
+GLint main(GLint argc, _TCHAR* argv[])
 {
 	ESContext esContext;
 	esInitContext(&esContext);
