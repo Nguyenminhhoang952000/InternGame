@@ -110,7 +110,7 @@ void GSPlay::HandleKeyEvents(int key, bool bIsPressed)
 	{
 		if (key == KEY_LEFT)
 		{
-			// Khi di chuyen trai, phai thi thay doi hinh dang goku
+			// Khi di chuyen trai, phai thi thay do hinh dang goku
 			auto shader = ResourceManagers::GetInstance()->GetShader("TextureShader");
 			auto model_player = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
 			auto texture1 = ResourceManagers::GetInstance()->GetTexture("goku moving left.tga");
@@ -205,7 +205,7 @@ void GSPlay::HandleTouchEvents(int x, int y, bool bIsPressed)
 
 
 		// Khi bam chuot xuong.
-		// Tao ra doi tuong bullet cho Player
+		// Tao ra doi tung bullet cho Player
 		auto mBullet = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
 		auto texture = ResourceManagers::GetInstance()->GetTexture("DragonDead.tga");
 
@@ -321,7 +321,6 @@ void GSPlay::Draw()
 			bool bRet = pBullet->CheckCollision(pMonster);
 			if (bRet == true)
 			{
-				//Reset
 				pMonster->SetIsAliveMonster(false);
 				bDestroy = true;
 				break;

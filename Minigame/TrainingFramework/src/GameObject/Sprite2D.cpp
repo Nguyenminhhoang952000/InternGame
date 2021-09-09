@@ -291,7 +291,7 @@ bool Sprite2D::CheckCollision(const SpriteRect& object1, const SpriteRect& objec
 		}
 	}
 
-	// Case 2: size object 1 > size object 2
+	// Case 2: size object 1 < size object 2
 	if (left_b > left_a && left_b < right_a)
 	{
 		if (top_b > top_a && top_b < bottom_a)

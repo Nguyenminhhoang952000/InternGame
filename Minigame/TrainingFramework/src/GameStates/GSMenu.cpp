@@ -75,7 +75,7 @@ void GSMenu::Init()
 	m_textGamePlay->Set2DPosition(Vector2(200, Globals::screenHeight - 220));
 	m_textGameOption->Set2DPosition(Vector2(20, Globals::screenHeight - 100));
 	m_textGameCredit->Set2DPosition(Vector2(130, Globals::screenHeight - 100));
-	m_textGameClose->Set2DPosition(Vector2(230, Globals::screenHeight - 100));
+	m_textGameClose->Set2DPosition(Vector2(210, Globals::screenHeight - 100));
 }
 
 void GSMenu::Exit()
@@ -131,7 +131,7 @@ void GSMenu::Draw()
 	{
 		it->Draw();
 	}
-	//m_textGameName->Draw(); ve
+	//m_textGameName->Draw();
 	m_textGamePlay->Draw();
 	m_textGameOption->Draw();
 	m_textGameCredit->Draw();

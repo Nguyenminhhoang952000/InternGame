@@ -31,5 +31,6 @@ private:
 	std::shared_ptr<Text>					m_textGamePlay;
 	std::shared_ptr<Text>					m_textGameClose;
 
+
 };
 
