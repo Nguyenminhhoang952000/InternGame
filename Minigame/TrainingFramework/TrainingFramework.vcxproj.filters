@@ -72,6 +72,9 @@
     <ClCompile Include="GSCredit.cpp">
       <Filter>TrainingFramework\src</Filter>
     </ClCompile>
+    <ClCompile Include="src\GameObject\ParallelBG.cpp">
+      <Filter>TrainingFramework\src\GameObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Application.h">
@@ -133,6 +136,9 @@
     </ClInclude>
     <ClInclude Include="GSCredit.h">
       <Filter>TrainingFramework\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\ParallelBG.h">
+      <Filter>TrainingFramework\src\GameObject</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

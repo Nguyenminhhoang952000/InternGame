@@ -8,6 +8,7 @@
 #include "Sprite3D.h"
 #include "Text.h"
 #include "GameButton.h"
+#include "ParallelBG.h"
 
 #define NUM_MONSTER 5
 
@@ -19,8 +20,7 @@ int offsetY[NUM_MONSTER] = { 100, -100, 250, -250, 400 }; // Offset vi tri xuat 
 std::string MonsterList[NUM_MONSTER] = { "cell_160.tga", "Frieza.tga",
                                           "cell_160.tga", "Frieza.tga", "cell_160.tga" };
 
-GSPlay::GSPlay()
-{
+GSPlay::GSPlay(){
 
 }
 
@@ -37,9 +37,7 @@ void GSPlay::Init()
 	auto shader = ResourceManagers::GetInstance()->GetShader("TextureShader");
 
 	// background
-	m_background = std::make_shared<Sprite2D>(model, shader, texture);
-	m_background->Set2DPosition((float)Globals::screenWidth / 2, (float)Globals::screenHeight / 2);
-	m_background->SetSize(Globals::screenWidth, Globals::screenHeight);
+	m_background = std::make_shared<ParallelBG>(model, shader, texture, 100.0f);
 
 	// player
 	auto model_player = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
@@ -80,7 +78,7 @@ void GSPlay::Init()
 	// score
 	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
 	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("Brightly Crush Shine.otf");
-	m_score = std::make_shared< Text>(shader, font, "score: 10", TextColor::BLACK, 1.0);
+	m_score = std::make_shared< Text>(shader, font, "score: 100", TextColor::GREEN, 1.0);
 	m_score->Set2DPosition(Vector2(5, 25));
 
 }
@@ -204,7 +202,7 @@ void GSPlay::HandleTouchEvents(int x, int y, bool bIsPressed)
 		m_player->SetSize(150, 86);
 
 
-		// Khi bam chuot xuong.
+		// Khi bam chuot trai.
 		// Tao ra doi tung bullet cho Player
 		auto mBullet = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
 		auto texture = ResourceManagers::GetInstance()->GetTexture("DragonDead.tga");
@@ -249,7 +247,7 @@ void GSPlay::Update(float deltaTime)
 	{
 		it->Update(deltaTime);
 	}
-
+	m_background->Update(deltaTime);
 	// Kiem tra trang thai alive cua bullet
 	for (int i = 0; i < m_bullet.size(); i++)
 	{
@@ -289,6 +287,8 @@ void GSPlay::Update(float deltaTime)
 			pMonster->SetIsAliveMonster(true);
 		}
 	}
+
+
 }
 
 void GSPlay::Draw()

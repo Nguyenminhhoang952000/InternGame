@@ -44,7 +44,7 @@ public:
 	bool        CheckCollision(std::shared_ptr<Sprite2D> pObj);
 	bool        CheckCollision(const SpriteRect& object1, const SpriteRect& object2);
 
-	void		Set2DPosition(GLint x, GLint y);
+	void		Set2DPosition(GLfloat x, GLfloat y);
 	void		Set2DPosition(Vector2 position);
 	void		SetSize(GLint width, GLint height);
 	GLint       GetWidth() const { return m_iWidth; }

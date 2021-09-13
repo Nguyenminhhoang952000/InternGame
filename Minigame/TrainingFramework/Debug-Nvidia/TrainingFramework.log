@@ -1,6 +1,8 @@
-﻿  GSMenu.cpp
-D:\Minigame\TrainingFramework\src\GameStates\GSMenu.cpp(75,67): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-D:\Minigame\TrainingFramework\src\GameStates\GSMenu.cpp(76,68): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-D:\Minigame\TrainingFramework\src\GameStates\GSMenu.cpp(77,69): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-D:\Minigame\TrainingFramework\src\GameStates\GSMenu.cpp(78,68): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-  TrainingFramework.vcxproj -> D:\Minigame\BIN-Nvidia\TrainingFramework.exe
+﻿  ParallelBG.cpp
+D:\InternGame\InternGame\Minigame\TrainingFramework\src\GameObject\ParallelBG.cpp(15,78): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\InternGame\InternGame\Minigame\TrainingFramework\src\GameObject\ParallelBG.cpp(15,51): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\InternGame\InternGame\Minigame\TrainingFramework\src\GameObject\ParallelBG.cpp(19,102): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\InternGame\InternGame\Minigame\TrainingFramework\src\GameObject\ParallelBG.cpp(19,56): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\InternGame\InternGame\Minigame\TrainingFramework\src\GameObject\ParallelBG.cpp(90,52): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\InternGame\InternGame\Minigame\TrainingFramework\src\GameObject\ParallelBG.cpp(95,53): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+  TrainingFramework.vcxproj -> D:\InternGame\InternGame\Minigame\BIN-Nvidia\TrainingFramework.exe
